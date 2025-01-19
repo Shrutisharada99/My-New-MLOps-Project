@@ -1,0 +1,3 @@
+func init Stream-data-real-time --python
+cd Stream-data-real-time
+func new

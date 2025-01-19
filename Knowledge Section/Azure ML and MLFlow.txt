@@ -1,0 +1,14 @@
+Azure ML and MLFlow:
+
+Azure ML automatically integrates MLflow for tracking experiments. The MLflow tracking URI in Azure ML points to the workspace’s tracking server and allows logs to be stored and accessed through Azure ML.
+
+In your code:
+
+Use mlflow.set_tracking_uri(azureml_mlflow_uri) to set the tracking URI for Azure ML.
+Use mlflow.start_run() within your training script to log metrics, parameters, and artifacts.
+Tracking URI Usage
+The MLflow tracking URI (azureml://<workspace_name>.mlflow.azure.com) can be used to:
+
+Log all experiment-related metadata (parameters, metrics, and artifacts).
+View logs and experiment tracking in the Azure ML Studio UI under the "Experiments" section.
+Integrate with other tools like Evidently AI for monitoring model drift using MLflow's artifact storage.
